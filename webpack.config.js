@@ -2,6 +2,7 @@ const path = require('path');
 
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const TypedocWebpackPlugin = require('typedoc-webpack-plugin');
 
 const nodeEnv = process.env.NODE_ENV || 'development';
 const isProd = nodeEnv === 'production';
@@ -70,6 +71,9 @@ const config = {
                 comments: false
             },
             sourceMap: false
+        }),
+        new TypedocWebpackPlugin({
+            out: '../docs'
         })
     ]
 };

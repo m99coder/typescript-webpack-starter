@@ -156,8 +156,9 @@ typings/
 # dotenv environment variables file
 .env
 
-# Output directory
+# Output directories
 dist
+docs
 
 
 # End of https://www.gitignore.io/api/macos,linux,node,jetbrains
