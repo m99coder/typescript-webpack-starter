@@ -29,11 +29,11 @@ const config = {
                 exclude: ['node_modules'],
                 loader: 'tslint-loader',
                 options: {
+                    emitErrors: true,
                     failOnHint: true
                 }
             },
             {
-                enforce: 'pre',
                 test: /\.ts$/,
                 exclude: ['node_modules', 'src/**/*.spec.ts'],
                 loader: 'ts-loader'

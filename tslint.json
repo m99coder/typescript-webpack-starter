@@ -1,4 +1,6 @@
 {
+  "emitErrors": true,
+  "failOnHint": true,
   "rules": {
     "class-name": true,
     "comment-format": [true, "check-space"],
@@ -13,8 +15,8 @@
     "triple-equals": true,
     "typedef-whitespace": [true, {
       "index-signature": "nospace",
-      "parameter": "space",
-      "variable-declaration": "space"
+      "parameter": "nospace",
+      "variable-declaration": "nospace"
     }],
     "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"],
     "whitespace": [true,

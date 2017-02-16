@@ -7,10 +7,11 @@
     "build": "npm run build:dev",
     "build:dev": "webpack --config ./webpack.config.js --progress --profile --color --display-error-details --display-cached",
     "clean": "npm cache clear && rimraf -- dist npm-debug.log",
-    "lint": "tslint --config ./tslint.json -e node_modules src/**/*.ts",
     "server": "npm run server:dev",
     "server:dev": "webpack-dev-server --config ./webpack.config.js --port 3000 --host 0.0.0.0 --hot --inline --progress --profile --watch --content-base dist/",
-    "start": "npm run server"
+    "start": "npm run server",
+    "test": "npm run tslint",
+    "tslint": "tslint --config ./tslint.json -e node_modules src/**/*.ts"
   },
   "author": "Marco Lehmann <m99coder@gmail.com>",
   "license": "MIT",
