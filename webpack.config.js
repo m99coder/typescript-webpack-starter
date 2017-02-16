@@ -26,6 +26,15 @@ const config = {
             {
                 enforce: 'pre',
                 test: /\.ts$/,
+                exclude: ['node_modules'],
+                loader: 'tslint-loader',
+                options: {
+                    failOnHint: true
+                }
+            },
+            {
+                enforce: 'pre',
+                test: /\.ts$/,
                 exclude: ['node_modules', 'src/**/*.spec.ts'],
                 loader: 'ts-loader'
             },
