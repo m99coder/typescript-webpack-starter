@@ -1,10 +1,17 @@
 import * as d3 from 'd3';
 
-export default class Main {
-    constructor() {
-        console.log( 'Hello, World!');
-        console.log(d3.color('#ff8e25'));
+import {HelloComponent} from './components/hello.component';
+import {IHelloService} from './interfaces/hello.service';
+
+class MyHelloService implements IHelloService {
+
+    public sayHello(): string {
+        return 'Hello, World in ' + d3.color('#ff8e25');
     }
+
 }
 
-let start = new Main();
+let myService = new MyHelloService();
+let myComponent = new HelloComponent(myService);
+
+console.info(myComponent.sayHello());
